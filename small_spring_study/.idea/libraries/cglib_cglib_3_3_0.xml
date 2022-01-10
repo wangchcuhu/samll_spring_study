@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="cglib:cglib:3.3.0" type="repository">
+    <properties maven-id="cn.hutool:hutool-all:5.5.0" />
+    <ANNOTATIONS>
+      <root url="file://$MAVEN_REPOSITORY$/cglib" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/hutool/hutool-all/5.5.0/hutool-all-5.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

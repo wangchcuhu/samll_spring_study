@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8983584-33a0-4dcb-92ab-be98b83f6ae0" name="默认变更列表" comment="" />
+    <list default="true" id="d8983584-33a0-4dcb-92ab-be98b83f6ae0" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/small_spring_study/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_05/factory/xml/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/BeansException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/PropertyValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/PropertyValues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/BeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/ConfigurableListableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/HierarchicalBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/ListableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/config/AutowireCapableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/config/BeanDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/config/BeanReference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/config/ConfigurableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/config/SingletonBeanRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/support/AbstractBeanDefinitionReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/support/AbstractBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/support/BeanDefinitionReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/support/BeanDefinitionRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/support/CglibSubclassingInstantiationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/support/DefaultListableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/support/DefaultSingletonBeanRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/support/InstantiationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/support/SimpleInstantiationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/beans/factory/xml/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/core/io/ClassPathResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/core/io/DefaultResourceLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/core/io/FileSystemResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/core/io/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/core/io/ResourceLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/core/io/UrlResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_06/util/ClassUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/main/resources/spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/test/java/step_05/factory/ApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/test/java/step_05/factory/bean/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/test/java/step_05/factory/bean/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/test/java/step_06/factory/ApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/test/java/step_06/factory/bean/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/test/java/step_06/factory/bean/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/test/resources/important.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/small_spring_study/src/test/resources/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small-spring" beforeDir="false" afterPath="$PROJECT_DIR$/small-spring" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/.idea/libraries/cn_hutool_hutool_all_5_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/small_spring_study/.idea/libraries/cglib_cglib_3_3_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/small_spring_study/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/src/main/java/step_05/factory/config/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_05/factory/config/BeanDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/src/main/java/step_05/factory/support/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_05/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/src/main/java/step_05/factory/support/BeanDefinitionRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_05/factory/support/BeanDefinitionRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/src/main/java/step_05/factory/support/DefaultListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/small_spring_study/src/main/java/step_05/factory/support/DefaultListableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/src/main/java/step_05/factory/support/XmlBeanDefinitionReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/target/classes/step_05/core/io/UrlResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/small_spring_study/target/classes/step_05/core/io/UrlResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/target/classes/step_05/factory/config/BeanDefinition.class" beforeDir="false" afterPath="$PROJECT_DIR$/small_spring_study/target/classes/step_05/factory/config/BeanDefinition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/target/classes/step_05/factory/support/AbstractAutowireCapableBeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/small_spring_study/target/classes/step_05/factory/support/AbstractAutowireCapableBeanFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/target/classes/step_05/factory/support/BeanDefinitionRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/small_spring_study/target/classes/step_05/factory/support/BeanDefinitionRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/small_spring_study/target/classes/step_05/factory/support/DefaultListableBeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/small_spring_study/target/classes/step_05/factory/support/DefaultListableBeanFactory.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/small-spring" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="23IxGYdaJHgpgqYUsFTKWvqL5UR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,6 +89,8 @@
       <updated>1641435309449</updated>
       <workItem from="1641435310839" duration="872000" />
       <workItem from="1641436238664" duration="1780000" />
+      <workItem from="1641802697702" duration="111000" />
+      <workItem from="1641804239999" duration="6000" />
     </task>
     <servers />
   </component>
