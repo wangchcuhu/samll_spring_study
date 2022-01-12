@@ -11,4 +11,7 @@
 <!--      所谓的中间件，就是同样放在容器池子中间，但是由于有的对象时继承或者实现特定的接口/抽象类,上下文会在生命周期的摸个时间遍历调用属于这个接口的-->
 <!--      子类生成的对象-->
      <bean class="step_06.common.MyBeanFactoryPostProcessor"></bean>
+<!--        bean的中间件-->
+      <bean class="step_06.common.MyBeanPostProcessor"></bean>
+
 </beans>
