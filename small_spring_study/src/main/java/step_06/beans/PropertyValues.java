@@ -1,4 +1,4 @@
-package step_06;
+package step_06.beans;
 
 import java.util.ArrayList;
 import java.util.List;

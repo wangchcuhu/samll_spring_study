@@ -1,8 +1,13 @@
-package step_06.factory.support;
+package step_06.beans.factory.support;
 
 import step_03.BeansException;
-import step_06.factory.BeanFactory;
-import step_06.factory.config.BeanDefinition;
+import step_06.beans.factory.BeanFactory;
+import step_06.beans.factory.config.BeanDefinition;
+import step_06.beans.factory.config.BeanPostProcessor;
+import step_06.beans.factory.config.ConfigurableBeanFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
@@ -11,8 +16,9 @@ import step_06.factory.config.BeanDefinition;
  *
  * BeanDefinition 注册表接口
  */
-public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory {
-
+public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements ConfigurableBeanFactory {
+    /** BeanPostProcessors to apply in createBean */
+    private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<BeanPostProcessor>();
     @Override
     public Object getBean(String name) throws BeansException {
         Object bean = getSingleton(name);
@@ -41,4 +47,22 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
     //传入参数构建
     protected abstract Object createBean(String beanName, BeanDefinition beanDefinition, Object[] args) throws BeansException;
 
+
+    /**
+     * 存储BeanPostProcessor
+     * @param beanPostProcessor
+     */
+
+    @Override
+    public void addBeanPostProcessor(BeanPostProcessor beanPostProcessor){
+        this.beanPostProcessors.remove(beanPostProcessor);
+        this.beanPostProcessors.add(beanPostProcessor);
+    }
+    /**
+     * Return the list of BeanPostProcessors that will get applied
+     * to beans created with this factory.
+     */
+    public List<BeanPostProcessor> getBeanPostProcessors() {
+        return this.beanPostProcessors;
+    }
 }

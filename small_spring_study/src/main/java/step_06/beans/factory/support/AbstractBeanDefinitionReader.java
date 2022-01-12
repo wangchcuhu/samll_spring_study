@@ -1,4 +1,4 @@
-package step_06.factory.support;
+package step_06.beans.factory.support;
 
 import step_06.io.DefaultGetRecourse;
 import step_06.io.ResourcesLoader;

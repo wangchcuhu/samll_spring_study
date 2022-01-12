@@ -1,4 +1,4 @@
-package step_06.factory;
+package step_06.beans.factory;
 
 
 import step_03.BeansException;
@@ -14,4 +14,6 @@ public interface BeanFactory {
 
     //使用有参数的构造函数
     Object getBean(String name, Object... args);
+
+//    <T> T getBean(String name, Class<T> requiredType) throws BeansException;
 }

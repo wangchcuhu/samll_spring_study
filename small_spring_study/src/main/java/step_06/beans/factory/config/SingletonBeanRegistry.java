@@ -1,4 +1,4 @@
-package step_06.factory.config;
+package step_06.beans.factory.config;
 
 /**
  * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！

@@ -1,7 +1,7 @@
-package step_06.factory.config;
+package step_06.beans.factory.config;
 
 
-import step_05.PropertyValues;
+import step_06.beans.PropertyValues;
 
 /**
  * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
@@ -20,6 +20,7 @@ public class BeanDefinition {
     }
 
     public BeanDefinition(Class beanClass) {
+
         this.beanClass = beanClass;
     }
 

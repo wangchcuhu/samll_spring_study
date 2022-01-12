@@ -1,4 +1,4 @@
-package step_06;
+package step_06.beans;
 
 /**
  * @program: small_spring_study

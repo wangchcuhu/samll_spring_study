@@ -1,4 +1,4 @@
-package step_06.factory.config;
+package step_06.beans.factory.config;
 
 /**
  * @program: small_spring_study

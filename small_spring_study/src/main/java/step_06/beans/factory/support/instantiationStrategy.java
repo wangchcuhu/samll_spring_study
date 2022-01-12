@@ -1,6 +1,6 @@
-package step_06.factory.support;
+package step_06.beans.factory.support;
 
-import step_06.factory.config.BeanDefinition;
+import step_06.beans.factory.config.BeanDefinition;
 
 import java.lang.reflect.Constructor;
 

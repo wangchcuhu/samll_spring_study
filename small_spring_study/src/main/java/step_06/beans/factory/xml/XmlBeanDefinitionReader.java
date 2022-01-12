@@ -1,4 +1,4 @@
-package step_06.factory.xml;
+package step_06.beans.factory.xml;
 
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.XmlUtil;
@@ -6,11 +6,12 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import step_03.BeansException;
-import step_05.PropertyValue;
-import step_06.factory.config.BeanDefinition;
-import step_06.factory.config.BeanReference;
-import step_06.factory.support.AbstractBeanDefinitionReader;
-import step_06.factory.support.BeanDefinitionRegistry;
+import step_06.beans.PropertyValue;
+import step_06.beans.PropertyValues;
+import step_06.beans.factory.config.BeanDefinition;
+import step_06.beans.factory.config.BeanReference;
+import step_06.beans.factory.support.AbstractBeanDefinitionReader;
+import step_06.beans.factory.support.BeanDefinitionRegistry;
 import step_06.io.Resource;
 import step_06.io.ResourcesLoader;
 
@@ -70,14 +71,14 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
             String id = bean.getAttribute("id");
             String name = bean.getAttribute("name");
             String className = bean.getAttribute("class");
-            // 获取 Class，方便获取类中的名称(根据类名直接获取Class,是否需要在一个包中？)
+            // 获取 Class，方便获取类中的名称(根据类名直接获取Class)
             Class<?> clazz = Class.forName(className);
             // 优先级 id > name
             String beanName = StrUtil.isNotEmpty(id) ? id : name;
             if (StrUtil.isEmpty(beanName)) {
                 beanName = StrUtil.lowerFirst(clazz.getSimpleName());
             }
-            //定义Bean
+            //定义Bean(这里有个问题，如果是含有属性的初始化会怎么样？是在注入属性的时判断PropertyValue的时null)
             BeanDefinition beanDefinition = new BeanDefinition(clazz);
             //读取属性并且填充
 
@@ -94,6 +95,9 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
                 Object value = StrUtil.isNotEmpty(attrRef) ? new BeanReference(attrRef) : attrValue;
                 // 创建属性信息
                 PropertyValue propertyValue = new PropertyValue(attrName, value);
+                if (beanDefinition.getPropertyValues() == null) {
+                    beanDefinition.setPropertyValues(new PropertyValues());
+                }
                 beanDefinition.getPropertyValues().addPropertyValue(propertyValue);
                 //判断这个bean是不是重复的
                 if (getRegister().containsBeanDefinition(beanName)) {

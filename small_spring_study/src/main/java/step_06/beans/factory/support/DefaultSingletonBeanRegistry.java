@@ -1,7 +1,7 @@
-package step_06.factory.support;
+package step_06.beans.factory.support;
 
 
-import step_06.factory.config.SingletonBeanRegistry;
+import step_06.beans.factory.config.SingletonBeanRegistry;
 
 import java.util.HashMap;
 import java.util.Map;

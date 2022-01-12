@@ -1,4 +1,4 @@
-package step_06.factory.support;
+package step_06.beans.factory.support;
 
 import step_03.BeansException;
 import step_06.io.Resource;

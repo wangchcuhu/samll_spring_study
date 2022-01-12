@@ -3,9 +3,12 @@
 
     <bean id="userDao" class="step_05.bean.UserDao"/>
 <!--    在添加bean的属性的自动化处理上有些问题，代码问题在XmlBeanDefinitionReader的96行哪里有问题，暂时不处理走下面的流程-->
-<!--    <bean id="userService" class="step_05.bean.UserService">-->
-<!--        <property name="uId" value="10001"/>-->
-<!--        <property name="userDao" ref="userDao"/>-->
-<!--    </bean>-->
-
+    <bean id="userService" class="step_05.bean.UserService">
+        <property name="uId" value="10001"/>
+<!--        ref赋值的就是上面的对象-->
+        <property name="userDao" ref="userDao"/>
+    </bean>
+<!--      所谓的中间件，就是同样放在容器池子中间，但是由于有的对象时继承或者实现特定的接口/抽象类,上下文会在生命周期的摸个时间遍历调用属于这个接口的-->
+<!--      子类生成的对象-->
+     <bean class="step_06.common.MyBeanFactoryPostProcessor"></bean>
 </beans>
