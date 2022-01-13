@@ -3,7 +3,8 @@
 
     <bean id="userDao" class="step_05.bean.UserDao"/>
 <!--    在添加bean的属性的自动化处理上有些问题，代码问题在XmlBeanDefinitionReader的96行哪里有问题，暂时不处理走下面的流程-->
-    <bean id="userService" class="step_05.bean.UserService">
+    <bean id="userService" class="step_05.bean.UserService" init-nethod="initDataMethod" destroy-method="destroyDataMethod">
+        这里的属性是在方法doLoadBeanDefinitions时候通过放在BeanDefinition中的PropertyValues这个数组中惊醒填充的
         <property name="uId" value="10001"/>
 <!--        ref赋值的就是上面的对象-->
         <property name="userDao" ref="userDao"/>
@@ -13,5 +14,7 @@
      <bean class="step_06.common.MyBeanFactoryPostProcessor"></bean>
 <!--        bean的中间件-->
       <bean class="step_06.common.MyBeanPostProcessor"></bean>
+<!--       bean的初始化方法，这是一个继承了InitializingBean的类，在创建bean的对象的时候判断一下是不是InitializingBean这个类的子类执行一下方法invokeInitMethods这个方法-->
+
 
 </beans>
