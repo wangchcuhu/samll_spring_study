@@ -6,8 +6,7 @@ import cn.hutool.core.util.StrUtil;
 import step_03.BeansException;
 import step_08.beans.PropertyValue;
 import step_08.beans.PropertyValues;
-import step_08.beans.factory.DisposableBean;
-import step_08.beans.factory.InitializingBean;
+import step_08.beans.factory.*;
 import step_08.beans.factory.config.AutowireCapableBeanFactory;
 import step_08.beans.factory.config.BeanDefinition;
 import step_08.beans.factory.config.BeanPostProcessor;
@@ -99,6 +98,19 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
      执行Bean的初始化方法和BeanPostProcessor的前置和后置的处理方法
      */
     private Object initializeBean(String beanName, Object bean, BeanDefinition beanDefinition) {
+          //这里调用自感方法，将资源传递给继承了Aware接口的那些类(获取资源)
+           if(bean instanceof BeanFactoryAware){
+               System.out.println(this.toString());
+               ((BeanFactoryAware) bean).setBeanFactory(this);
+           }
+
+          if(bean instanceof BeanClassLoaderAware){
+            ((BeanClassLoaderAware) bean).setBeanClassLoader(getBeanClassLoader());
+        }
+        if(bean instanceof BeanNameAware){
+            ((BeanNameAware) bean).setBeanName(beanName);
+        }
+
 //        System.out.println("1.执行 BeanPostProcessor Before 处理");
         // 1. 执行 BeanPostProcessor Before 处理
         Object wrappedBean = applyBeanPostProcessorsBeforeInitialization(bean, beanName);
