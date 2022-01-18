@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--整个Factory一共有两个比较重要的池子，一个是单例bean池子，一个是FactoryBean代理的单例池子-->
+<beans>
+    <bean id="IUserDao" class="step_09.ProxyBeanFactory"></bean>
+    <bean id="userDao" class="step_09.UserDao"></bean>
+<bean id="userService" class="step_09.UserService" scope="prototype">
+<property name="uId" value="10001"></property>
+    <property name="company" value="腾讯"/>
+    <property name="location" value="深圳"/>
+<!--   这里直接赋给的是代理池子中的bean    单例备案池和代理池的地位相同-->
+    <property name="userDao" ref="IUserDao"/>
+</bean>
+</beans>
