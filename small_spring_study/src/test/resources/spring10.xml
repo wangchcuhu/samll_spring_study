@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--整个Factory一共有两个比较重要的池子，一个是单例bean池子，一个是FactoryBean代理的单例池子-->
+<beans>
+  <bean class="step_10.event.ContextRefreshedEventListener"></bean>
+  <bean class="step_10.event.CustomListener"></bean>
+  <bean class="step_10.event.ContextClosedEventListener"></bean>
+</beans>

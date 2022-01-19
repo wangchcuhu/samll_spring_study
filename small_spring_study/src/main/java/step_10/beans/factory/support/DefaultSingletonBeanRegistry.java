@@ -32,6 +32,13 @@ public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
         singletonObjects.put(beanName, singletonObject);
     }
 
+    /**
+     直接向beans的池子里面注入对象
+     */
+    public void registerSingleton(String beanName, Object singletonObject) {
+        singletonObjects.put(beanName, singletonObject);
+    }
+
     public void registerDisposableBean(String beanName, DisposableBeanAdapter bean) {
         disposableBeans.put(beanName, bean);
     }

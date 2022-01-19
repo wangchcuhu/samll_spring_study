@@ -7,22 +7,36 @@ package step_10.utils;
  * @create: 2022-01-10 09:20
  */
 public class ClassUtils {
-    public static ClassLoader getDefaultClassLoader() {
 
+    public static ClassLoader getDefaultClassLoader() {
         ClassLoader cl = null;
-        try
-        {
-            //获取当前线程的类加载器,我们使用的对象都是通过这个生成的，如果当前线程没有就获取付父线程的类加载器
+        try {
             cl = Thread.currentThread().getContextClassLoader();
-        }catch(Throwable ex)
-        {
-            //Cannot access thread context ClassLoader -- failing back to system class Loader
         }
-        if(cl==null){
+        catch (Throwable ex) {
+            // Cannot access thread context ClassLoader - falling back to system class loader...
+        }
+        if (cl == null) {
+            // No thread context class loader -> use class loader of this class.
             cl = ClassUtils.class.getClassLoader();
         }
         return cl;
     }
 
+    /**
+     * Check whether the specified class is a CGLIB-generated class.
+     * @param clazz the class to check
+     */
+    public static boolean isCglibProxyClass(Class<?> clazz) {
+        return (clazz != null && isCglibProxyClassName(clazz.getName()));
+    }
+
+    /**
+     * Check whether the specified class name is a CGLIB-generated class.
+     * @param className the class name to check
+     */
+    public static boolean isCglibProxyClassName(String className) {
+        return (className != null && className.contains("$$"));
+    }
 
 }
