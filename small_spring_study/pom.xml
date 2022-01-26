@@ -20,6 +20,18 @@
             <artifactId>cglib</artifactId>
             <version>3.3.0</version>
         </dependency>
+        <dependency>
+            <groupId>cn.wangchu</groupId>
+            <artifactId>small_spring_study</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>5.3.14</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
