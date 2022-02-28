@@ -99,6 +99,7 @@ public class ApiTest {
         //获取代理之后的对象
         IUserService iUserService1 = (IUserService) targetProxy.getProxy();
         System.out.println(iUserService1.queryUserInfo());
+
     }
     }
 
